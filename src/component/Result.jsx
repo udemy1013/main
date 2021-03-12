@@ -17,7 +17,7 @@ import smilepower from "../images/smile_power.png";
 import softbankdenki from "../images/softbank_denki.png";
 import osakadenki from "../images/osakadenki.png";
 import audenki from "../images/au_denki.png";
-import elenovadenki from "../../Elenova.png";
+import elenovadenki from "../images/Elenova.png";
 import pintdenki from "../images/pint.png";
 import eneosdenki from "../images/eneos_denki.png";
 import kakuyasudenryoku from "../images/kakuyasudenryoku.png";
