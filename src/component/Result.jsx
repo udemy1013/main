@@ -17,7 +17,7 @@ import smilepower from "../images/smile_power.png";
 import softbankdenki from "../images/softbank_denki.png";
 import osakadenki from "../images/osakadenki.png";
 import audenki from "../images/au_denki.png";
-import elenovadenki from "../images/Elenova.png";
+import elenovadenki from "../../Elenova.png";
 import pintdenki from "../images/pint.png";
 import eneosdenki from "../images/eneos_denki.png";
 import kakuyasudenryoku from "../images/kakuyasudenryoku.png";
@@ -193,13 +193,12 @@ function Result(props) {
   //できない||料金が下がらないUI
   if (
     props.qI[0] === "家賃とまとめて請求がきている" ||
-    (props.qI[1] === "はい" && props.qI[2] === "なし") ||
-    (props.qI[3] === "関西電力なっとくパック" &&
-      props.qI[4] === "0円～5000円") ||
-    (props.qI[3] === "大阪ガス" && props.qI[4] === "0円～5000円") ||
-    (props.qI[3] === "ENE電気" && props.qI[4] === "0円～5000円") ||
-    (props.qI[3] === "ENEOS電気" && props.qI[4] === "0円～5000円") ||
-    (props.qI[3] === "エフエネ電気" && props.qI[4] === "0円～5000円") ||
+    (props.qI[1] === "はい" && props.qI[2] === "いいえ") ||
+    (props.qI[3] === "関西電力なっとくパック" && props.qI[4] < 5000) ||
+    (props.qI[3] === "大阪ガス" && props.qI[4] < 5000) ||
+    (props.qI[3] === "ENE電気" && props.qI[4] < 5000) ||
+    (props.qI[3] === "ENEOSでんき" && props.qI[4] < 5000) ||
+    (props.qI[3] === "エフエネ電気" && props.qI[4] < 5000) ||
     props.qI[3] === "その他"
   ) {
     return (
