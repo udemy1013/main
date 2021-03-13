@@ -44,7 +44,7 @@ p {
 }
 
 div .question {
-  margin-top: 85px;
+  margin-top: 60px;
   height: 50px;
 }
 
@@ -143,17 +143,20 @@ div .options {
 }
 
 .line-text {
-  margin-top: 25px;
-  font-size: 10px;
+  font-size: 20px;
   color: #fe8700;
 }
 
+.line-text h5 {
+  margin: 15px 0px;
+}
+
 .push {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .line-button {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .YourInformation {
@@ -163,6 +166,10 @@ div .options {
   font-family: source-han-sans-japanese, sans-serif;
   font-weight: 300;
   font-style: normal;
+}
+
+.MuiPaper-root {
+  margin-bottom: 50px;
 }
 
 /* result price not down */
@@ -181,7 +188,7 @@ div .options {
 
 .line-text2 {
   margin-top: 50px;
-  font-size: 10px;
+  font-size: 20px;
   color: #fe8700;
 }
 
