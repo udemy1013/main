@@ -194,12 +194,8 @@ function Result(props) {
   if (
     props.qI[0] === "家賃とまとめて請求がきている" ||
     (props.qI[1] === "はい" && props.qI[2] === "いいえ") ||
-    (props.qI[3] === "関西電力なっとくパック" && props.qI[4] < 5000) ||
-    (props.qI[3] === "大阪ガス" && props.qI[4] < 5000) ||
-    (props.qI[3] === "ENE電気" && props.qI[4] < 5000) ||
-    (props.qI[3] === "ENEOSでんき" && props.qI[4] < 5000) ||
-    (props.qI[3] === "エフエネ電気" && props.qI[4] < 5000) ||
-    props.qI[3] === "その他"
+    props.qI[3] === "その他" ||
+    lastPrice < 0
   ) {
     return (
       <div className="Result-box">
