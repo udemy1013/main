@@ -103,7 +103,7 @@ function Result(props) {
     prices[1] = 25.71;
     prices[2] = 25.71;
     prices[3] = 28.7;
-  } else if (props.qI[3] === "ENEOS電気") {
+  } else if (props.qI[3] === "ENEOSでんき") {
     denkiImage = eneosdenki;
     kihon = 285;
     prices[0] = 20.31;
