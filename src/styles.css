@@ -68,6 +68,29 @@ div .options {
   margin-bottom: 50px;
 }
 
+.dropdown-toggle {
+  background-color: #fe8700;
+  border-color: #fe8700;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #fe8700;
+  border-color: #fe8700;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #fd6e00;
+  border-color: #fd6e00;
+}
+
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+}
+
 /* Optima logo */
 .powerdby {
   position: absolute;
