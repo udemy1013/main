@@ -17,6 +17,8 @@ import Arrow from "../images/arrow.svg";
 import powerdby from "../images/powerdBy.svg";
 import { AnimateOnChange } from "react-animation";
 
+import { Dropdown } from "react-bootstrap";
+
 //UI
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -101,29 +103,23 @@ function Question(props) {
       <div>
         <FormControl className={classes.formControl}>
           <InputLabel id="demo-controlled-open-select-label">
-            {props.cQ === 3 ? "電気会社" : "電気料金"}
+            {props.cQ === 3 ? "" : "電気料金"}
           </InputLabel>
-          <Select
-            labelId="demo-controlled-open-select-label"
-            id="demo-controlled-open-select"
-            open={open}
-            onClose={handleClose}
-            onOpen={handleOpen}
-            value={props.cQ === 3 ? age : price}
-            onChange={props.cQ === 3 ? handleChange : handlePrice}
-          >
-            <MenuItem value="">電気会社は？</MenuItem>
-            {questions.options[props.cQ].map((question, index) => (
-              <MenuItem
-                onClick={props.click}
-                id={props.cQ}
-                value={"30"}
-                key={index}
-              >
-                {question["title"]}
-              </MenuItem>
-            ))}
-          </Select>
+          <Dropdown>
+            <Dropdown.Toggle value="">電気会社は？</Dropdown.Toggle>
+            <Dropdown.Menu>
+              {questions.options[props.cQ].map((question, index) => (
+                <Dropdown.Item
+                  onClick={props.click}
+                  id={props.cQ}
+                  value={"30"}
+                  key={index}
+                >
+                  {question["title"]}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
         </FormControl>
       </div>
     );
