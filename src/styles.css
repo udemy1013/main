@@ -143,10 +143,42 @@ div .options {
   margin-top: 24px;
 }
 
+h2 {
+  font-size: 16px;
+}
+
 .h3 {
   padding-top: 26px;
   font-size: 19px;
   font-weight: 400;
+}
+
+.year1 {
+  font-size: 20px;
+  color: #fe8700;
+  font-family: roboto;
+}
+
+.year2 {
+  font-size: 26px;
+  color: #fe8700;
+  font-family: roboto;
+}
+
+.year3 {
+  font-size: 35px;
+  color: #fe8700;
+  font-family: roboto;
+}
+
+.year1mg {
+  margin-bottom: 16px;
+}
+
+.leftAlign {
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 30px;
 }
 
 .exchange {
@@ -162,7 +194,7 @@ div .options {
   color: #fe8700;
   position: absolute;
   top: 65%;
-  left: 17%;
+  left: 6%;
 }
 
 .line-text {
@@ -221,6 +253,11 @@ div .options {
 
 .line-button2 {
   margin-top: 40px;
+}
+
+.cta {
+  margin-top: 30px;
+  font-size: 18px;
 }
 
 .YourTrouble {

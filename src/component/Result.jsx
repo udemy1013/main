@@ -4,8 +4,9 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import exchange from "../images/exchange.png";
 import pushbutton from "../images/push-button.png";
-import line from "../images/line.png";
+import line from "../images/linebtn2.png";
 import CountUp from "react-countup";
+import newArrow from "../images/new_Arrow.png";
 
 // Electrical-images
 import kansaidenki from "../images/ogp.png";
@@ -189,13 +190,12 @@ function Result(props) {
   }
 
   let lastPrice = Math.round(fPrice * 12 - spread() * 12);
-
   //できない||料金が下がらないUI
   if (
     props.qI[0] === "家賃とまとめて請求がきている" ||
     (props.qI[1] === "はい" && props.qI[2] === "いいえ") ||
-    props.qI[3] === "その他" ||
-    lastPrice < 0
+    lastPrice < 0 ||
+    props.qI[3] === "その他"
   ) {
     return (
       <div className="Result-box">
@@ -223,7 +223,7 @@ function Result(props) {
             </div>
             <div className="line-button2">
               <a href="https://lin.ee/xs4rLVz">
-                <img src={line} alt="line" width="80%" />
+                <img src={line} alt="line" width="65%" />
               </a>
             </div>
             <p className="YourTrouble">
@@ -271,7 +271,7 @@ function Result(props) {
               />
             </Grid>
             <Grid item xs={2}>
-              <img src={exchange} className="exchange" alt="矢印" />
+              <img src={newArrow} width="50%" className="exchange" alt="矢印" />
             </Grid>
             <Grid item xs className="Left-logo">
               <img
@@ -286,17 +286,40 @@ function Result(props) {
               </span>
             </Grid>
           </Grid>
-          <div className="line-text">
-            <h5>LINE@を追加して得する</h5>
+          <div className="leftAlign">
+            <h2 className="year1mg">
+              1年目…
+              <span className="year1">
+                {lastPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </span>
+              円
+            </h2>
+            <h2 className="year2mg">
+              2年目…
+              <span className="year2">
+                {(lastPrice * 2)
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </span>
+              円
+            </h2>
+            <h2 className="year3mg">
+              3年目…
+              <span className="year3">
+                {(lastPrice * 3)
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </span>
+              円
+            </h2>
           </div>
-          <div className="push">
-            <img src={pushbutton} alt="push" />
-          </div>
+
           <div className="line-button">
             <a href="https://lin.ee/xs4rLVz">
-              <img src={line} alt="line" width="65%" />
+              <img src={line} alt="line" width="55%" />
             </a>
           </div>
+          <h1 className="cta">友達追加で今すぐ申し込む</h1>
           <p className="YourInformation">
             あなたの情報をLINE@で送信し
             <br />
